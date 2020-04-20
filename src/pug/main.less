@@ -45,3 +45,28 @@
 // .input_focus{
 //   box-shadow: @boxF1;
 // }
+
+p{
+    .rem(19);
+    font-weight: 400;
+    color: @text;
+    margin-bottom: 24px;
+}
+ul{
+    margin-bottom: 24px;
+}
+li{
+    padding: 0 0 0 30px;
+    .rem(19);
+    font-weight: 400;
+    color: @text;
+    
+    position: relative;
+    &:before{
+        content:'●';
+        .rem(3);
+        position: absolute;
+        left: 0;
+        top: 40%;
+    }
+}
