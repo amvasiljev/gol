@@ -1,0 +1,110 @@
+.review {
+    height: 240px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: @box;
+    margin-bottom: 30px;
+
+    &__hero {
+        padding: 15px;
+        flex: 0 0 113px;
+        background-color:@wt;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        margin: 0 5px;
+    }
+
+    &__button {
+        height: 45px;
+        width: 45px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        cursor: pointer;
+        opacity: 0.6;
+        &:hover,&:focus,&:active{
+            opacity: 1;
+        }
+    }
+
+    &__content {
+        padding: 10px 15px 15px;
+        flex: 0 0 127px;
+        background-color: @green;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__team {
+        color: @wt;
+        .rem(20);
+        font-weight: 600;
+        line-height: 32px;
+    }
+
+    &__vs {
+        color: @wt;
+        margin: 0 5px;
+        .rem(20);
+        font-weight: 600;
+        line-height: 32px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__date {
+        padding: 0 0 0 30px;
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-position-y: center;
+        background-size: 18px;
+        color: @wt;
+        .rem(17);
+        line-height: 32px;
+        font-weight: 400;
+    }
+
+    &__score {
+        color: @wt;
+        .rem(17);
+        font-weight: 600;
+
+    }
+
+    &__link {
+        color: @wt;
+        .rem(17);
+        font-weight: 400;
+        text-decoration: underline;
+
+    }
+
+    &__video {
+        padding: 0 0 0 55px;
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-position-y: center;
+        height: 30px;
+        background-size: 40px;
+        color: @wt;
+        display: flex;
+        align-items: center;
+        text-decoration: underline;
+    }
+
+}

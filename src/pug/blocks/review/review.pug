@@ -1,0 +1,16 @@
+mixin review()
+    .review
+        .review__hero
+            img.review__logo.lazy(data-src="/assets/img/tambov.jpg", alt="")
+            a.review__button.lazy(data-src="/assets/img/play_hover.svg" href="/")
+            img.review__logo.lazy(data-src="/assets/img/ks.jpg", alt="")
+        .review__content
+            .review__title
+                .review__team Тамбов
+                .review__vs -
+                .review__team Крылья Советов
+            .review__info 
+                .review__date.lazy(data-src="/assets/img/calendar.svg") 16.03.2020
+                .review__score Счет: 
+                    a(href="/").review__link показать
+            a.review__video.lazy(data-src="/assets/img/hd.svg" href='/') Обзор матча
