@@ -1,0 +1,8 @@
+mixin article(img, title)
+    .article
+        .article__image.lazy(data-src= img, alt="")
+        
+        .article__content
+            a.article__title(href="/")= title
+            .article__date.lazy(data-src="/assets/img/calendar.svg") 16.03.2020
+            a.article__video.lazy(data-src="/assets/img/hd.svg" href='/')
