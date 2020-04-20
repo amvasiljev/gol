@@ -8,7 +8,7 @@ var navItem = $('.nav__item');
 var bodyWidth = $('body').outerWidth();
 
 var navWidth = 0;
-navItem.each(function(){
+navItem.each(function () {
   var itemWidth = $(this).outerWidth();
   navWidth += itemWidth;
 })
@@ -19,31 +19,31 @@ var navMore = $('.nav__more');
 
 navMore.hide();
 
-if(navWidth >= bodyWidth){
+if (navWidth >= bodyWidth) {
   navMore.show();
   $('<div>').addClass('nav__hide').appendTo(navMore).hide()
   var tempWidth = 0;
-  navItem.each(function(){
+  navItem.each(function () {
     var itemW = $(this).outerWidth();
-    
-    if((tempWidth + 300) <= bodyWidth){
+
+    if ((tempWidth + 300) <= bodyWidth) {
       tempWidth += itemW;
       console.log('динамическая ширина  ' + tempWidth);
-    }else{
+    } else {
       $(this).appendTo($('.nav__hide'))
     }
   })
-}else{
+} else {
   navMore.hide();
   $('.nav__hide').remove();
 }
 
 
 navMore.hover(
-  function(){
+  function () {
     $('.nav__hide').dequeue().stop(true, true).fadeIn()
   },
-  function(){
+  function () {
     $('.nav__hide').dequeue().stop(true, true).fadeOut();
   }
 )
@@ -59,6 +59,17 @@ $('.slider__box_main').slick({
   appendArrows: $('.slider__arrows_main'),
 })
 
+$('.slider-team__box').slick({
+  lazyload: 'ondemand',
+  infinite: false,
+  slidesToShow: 12,
+  slidesToScroll: 3,
+  dots: false,
+  nextArrow: '<div class="slider-team__arrow slider-team__arrow_next slider-team__arrow_next">',
+  prevArrow: '<div class="slider-team__arrow slider-team__arrow_prev slider-team__arrow_prev">',
+  appendArrows: $('.slider-team__arrows'),
+})
+
 
 $('.shedule__select').niceSelect();
 
@@ -66,26 +77,28 @@ $('.schedule__date_choice').datepicker();
 
 jQuery(function ($) {
   $.datepicker.regional['ru'] = {
-      closeText: 'Закрыть',
-      prevText: '<Пред',
-      nextText: 'След>',
-      currentText: 'Сегодня',
-      monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
-          'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-      monthNamesShort: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
-          'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-      dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
-      dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
-      dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-      weekHeader: 'Нед',
-      dateFormat: 'dd.mm.yy',
-      firstDay: 1,
-      isRTL: false,
-      showMonthAfterYear: false,
-      yearSuffix: ''
-  };   
-      $.datepicker.setDefaults($.datepicker.regional['ru']);
-  });
+    closeText: 'Закрыть',
+    prevText: '<Пред',
+    nextText: 'След>',
+    currentText: 'Сегодня',
+    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+      'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+    ],
+    monthNamesShort: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+      'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+    ],
+    dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+    dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    weekHeader: 'Нед',
+    dateFormat: 'dd.mm.yy',
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: ''
+  };
+  $.datepicker.setDefaults($.datepicker.regional['ru']);
+});
 
 // // inputs
 // $(document).on('focus', 'input[type="text"]', function () {
