@@ -1,0 +1,17 @@
+mixin schedule()
+    .schedule
+        .schedule__inner
+            .schedule__soon
+                .schedule__name Ближайшие матчи
+                .schedule__date.schedule__date_today Сегодня
+                .schedule__date.schedule__date_tomorrow Завтра
+                input.schedule__date.schedule__date_choice(type="text" placeholder="Выбрать дату")
+            .schedule__timezone Ваш часовой пояс:
+                select.shedule__select
+                    option(data-display="По умолчанию") По умолчанию
+                    option(value='1') UTC+8
+                    option(value='1') UTC-5
+                    option(value='1') UTC+1
+                    option(value='1') UTC+7
+        .schedule__inner.schedule__inner_video
+            .schedule__text.lazy(data-src='/assets/img/no_video.svg') Трансляций на ближайшее время не запланировано
