@@ -100,6 +100,11 @@ jQuery(function ($) {
   $.datepicker.setDefaults($.datepicker.regional['ru']);
 });
 
+
+
+$('.section').last().addClass('section_final')
+
+
 // // inputs
 // $(document).on('focus', 'input[type="text"]', function () {
 //   $(this).addClass('input_focus');
