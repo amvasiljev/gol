@@ -49,6 +49,19 @@ navMore.hover(
 )
 
 
+
+$('.slider__box_main').slick({
+  lazyload: 'ondemand',
+  infinite: false,
+  dots: false,
+  nextArrow: '<div class="slider__arrow slider__arrow_next slider__arrow_next_main">',
+  prevArrow: '<div class="slider__arrow slider__arrow_prev slider__arrow_prev_main">',
+  appendArrows: $('.slider__arrows_main'),
+})
+
+
+
+
 // // inputs
 // $(document).on('focus', 'input[type="text"]', function () {
 //   $(this).addClass('input_focus');
