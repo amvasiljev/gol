@@ -1,0 +1,87 @@
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    background-image: @menu;
+    &__item{
+        color: @wt;
+        .rem(20);
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        height: 44px;
+        justify-content: center;
+        padding: 0 20px;
+        position: relative;
+        white-space: nowrap;
+    
+        
+        
+        &_active{
+            &:before{
+                position: absolute;
+                display: block;
+                content:'';
+                height: 2px;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                background-color: @wt;
+            }
+        }
+        &:hover,&:focus,&:active{
+            color: @wt;
+            &:before{
+                position: absolute;
+                display: block;
+                content:'';
+                height: 2px;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                background-color: @wt;
+            }
+        }
+    }
+
+    &__more{
+        cursor: pointer;
+        color: @wt;
+        .rem(20);
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        height: 44px;
+        justify-content: center;
+        padding: 0 20px;
+        position: relative;
+        white-space: nowrap;
+        
+        &:hover,&:focus,&:active{
+            // color: @wt;
+            // &:before{
+            //     position: absolute;
+            //     display: block;
+            //     content:'';
+            //     height: 2px;
+            //     width: 100%;
+            //     left: 0;
+            //     bottom: 0;
+            //     background-color: @wt;
+            // }
+        }
+    }
+    &__hide{
+        position: absolute;
+        padding: 20px;
+        background-color: @banner;
+        top: 45px;
+        right: -58px;
+        display: flex;
+        flex-direction: column;
+        width: 220px;
+        
+    }
+}

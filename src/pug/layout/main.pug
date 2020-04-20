@@ -3,6 +3,7 @@ include ../blocks/banner/banner
 include ../blocks/footer/footer
 include ../blocks/header/header
 include ../blocks/logo/logo
+include ../blocks/nav/nav
 include ../blocks/social/social
 
 block variables
@@ -20,6 +21,7 @@ html(lang="ru")
 
     body(class=pageClass)
         +header()
+        +nav()
         block content
         +footer()
 
