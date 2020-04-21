@@ -42,7 +42,11 @@
         max-width: 1170px;
         width: 100%;
         padding: 60px 0;
-
+        &_half{
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-between;
+        }
     }
 
     &__box {
@@ -50,8 +54,102 @@
         flex-flow: wrap;
         justify-content: space-between;
         padding: 15px 0 45px;
-        &_related{
+
+        &_related {
             padding: 15px 40px 45px;
+        }
+        &_half{
+            width: 50%;
+        }
+        &_noflex{
+            display: block;
+        }
+    }
+
+    img {
+        max-width: 970px;
+    }
+
+    &__subtitle {
+        .rem(19);
+        font-weight: 600;
+        color: @bld;
+        margin-bottom: 24px;
+        font-style: italic;
+        margin-top: 30px;
+    }
+    &__text{
+
+        p,ul,li,a{
+            .rem(19);
+        font-weight: 400;
+        color: @bld;
+        margin-bottom: 24px;
+        margin-top: 30px;
+        }
+    }
+    &__arrows{
+        max-width: 160px;
+        width: 100%;
+        padding: 30px 0;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        
+    }
+    &__arrow{
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url('/assets/img/next.svg');
+        cursor: pointer;
+        
+        &_prev{
+            transform: rotate(180deg);
+            &:hover,&:focus,&:active{
+                background-image: url('/assets/img/next_hover.svg');
+            }
+        }
+        &_next{
+            &:hover,&:focus,&:active{
+                background-image: url('/assets/img/next_hover.svg');
+            }
+        }
+    }
+
+    &__table{
+        width: 100%;
+        margin-top: -40px;
+        img{
+            height: 30px;
+            width: 20px;
+        }
+        tr{
+            height: 45px;
+            &:first-child{
+                border-bottom: 2px solid @green;
+            }
+            &:not(:first-child){
+                border-top: 1px solid @line2;
+            }
+        }
+        th{
+            .rem(20);
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+            vertical-align: middle;
+            color: @green;
+        }
+        td{
+            .rem(20);
+            font-weight: 400;
+            
+            text-align: center;
+            vertical-align: middle;
+            color: @bld;
         }
     }
 }
