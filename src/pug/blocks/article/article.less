@@ -5,22 +5,31 @@
     flex-direction: column;
     box-shadow: @box;
     margin-bottom: 30px;
+    &_news{
+        height: 300px;
+    }
 
     &__image{
         flex: 0 0 163px;
         background-repeat: no-repeat;
         background-position: 0 0;
-        background-size: contain;
+        background-size: cover;
+        &_news{
+            flex: 0 0 200px;
+        }
     }
 
     &__content {
-        padding: 10px 15px 15px;
+        padding: 10px 15px;
         flex: 0 0 130px;
         background-color: @green;
         display: flex;
         flex-flow: wrap;
         justify-content: space-between;
-        
+
+        &_news{
+            flex: 0 0 100px;
+        }
     }
 
     &__title {
@@ -29,6 +38,9 @@
         font-weight: 600;
         line-height: normal;
         height: 72px;
+        &_news{
+            height: auto;
+        }
         &:hover,&:focus,&:active{
             color: @wt;
         }
@@ -44,8 +56,9 @@
         background-size: 18px;
         color: @wt;
         .rem(17);
-        line-height: 32px;
+        line-height: 24px;
         font-weight: 400;
+        height: 20px;
     }
 
 
