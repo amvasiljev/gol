@@ -58,6 +58,14 @@ $('.slider__box_main').slick({
   prevArrow: '<div class="slider__arrow slider__arrow_prev slider__arrow_prev_main">',
   appendArrows: $('.slider__arrows_main'),
 })
+$('.slider__box_fk').slick({
+  lazyload: 'ondemand',
+  infinite: false,
+  dots: false,
+  nextArrow: '<div class="slider__arrow slider__arrow_next slider__arrow_next_fk">',
+  prevArrow: '<div class="slider__arrow slider__arrow_prev slider__arrow_prev_fk">',
+  appendArrows: $('.slider__arrows_fk'),
+})
 
 $('.slider-team__box').slick({
   lazyload: 'ondemand',
