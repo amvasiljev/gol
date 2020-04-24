@@ -1,0 +1,42 @@
+.upcoming{
+
+    border-top: 1px solid @line;
+    padding: 20px 0 0 0;
+    min-height: 120px;
+    &__title{
+        .rem(25);
+        font-weight: 600;
+        color: @green;
+        margin-bottom: 10px;
+    }
+    &__empty{
+        color: @bk;
+        font-weight: 400;
+        .rem(20);
+    }
+    table{
+        max-width: 770px;
+        width: 100%;
+        margin: 30px 0 0 0;
+
+    }
+    tr{
+        height: 45px;
+        
+    }
+    td{
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-right: 50px;
+        .rem(20);
+        color: @bk;
+        font-weight: 400;
+        a{
+            color: @green;
+            &:hover,&:active,&:focus,&:visited{
+                color: @green;
+            }
+        }
+    }
+}

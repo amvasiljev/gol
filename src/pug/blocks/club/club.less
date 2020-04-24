@@ -4,30 +4,50 @@
         max-width: 1170px;
         width: 100%;
         margin: 0 auto;
-        padding: 30px 0;
+        padding: 55px 0;
     }
     &__name{
-
+        .rem(40);
+        font-weight: 700;
+        color: @green;
     }
     &__country{
+        .rem(20);
+        color: @bld;
+        font-weight: 400;
+    }
 
+    &__content{
+        display: flex;
+        padding: 30px 0 45 0;
     }
     &__caption{
-
+        padding: 27px 0 0 60px;
     }
     &__logo{
 
     }
     &__item{
-
+        display: flex;
+       margin-bottom: 16px;
     }
     &__option{
-
+        .rem(20);
+        font-weight: 600;
+        color: @green;
+        margin-right: 5px;
+        
     }
     &__value{
-
+        .rem(20);
+        font-weight: 400;
+        color: @bld;
     }
     &__text{
-
+        p{
+            .rem(20);
+        color: @bld;
+        font-weight: 400;
+        }
     }
 }
