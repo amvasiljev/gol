@@ -1,7 +1,11 @@
 mixin section_reviews()
     .section
         .section__inner
-            +title('Последние видеообзоры')
+            
+            if title == 'index'
+                +title('Последние видеообзоры')
+            else
+                +title('Видео обзоры матчей')
             .section__box
                 +review()
                 +review()
@@ -11,4 +15,8 @@ mixin section_reviews()
                 +review()
                 +review()
                 +review()
-            +button('button_more','Показать еще')
+            if title == 'index'
+                +button('button_more','Показать еще')
+            else
+                +pagination()
+            
