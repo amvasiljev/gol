@@ -33,45 +33,49 @@
     font-family: 'TT Chocolates';
 }
 
-// html,
-// body {
-//   height: 100%;
-// }
-
-// body {
-//   min-height: 100%;
-// }
-
-@media @320{
-    .stop_scrolling {
+html,
+body {
   height: 100%;
-  overflow: hidden;
-  position: fixed;
 }
+
+body {
+  min-height: 100%;
+  position: relative;
 }
+
+// @media @320 {
+//     .stop_scrolling {
+//         height: 100%;
+//         overflow: hidden;
+//         position: fixed;
+//     }
+// }
 
 // .input_focus{
 //   box-shadow: @boxF1;
 // }
 
-p{
+p {
     .rem(19);
     font-weight: 400;
     color: @text;
     margin-bottom: 24px;
 }
-ul{
+
+ul {
     margin-bottom: 24px;
 }
-li{
+
+li {
     padding: 0 0 0 30px;
     .rem(19);
     font-weight: 400;
     color: @text;
-    
+
     position: relative;
-    &:before{
-        content:'●';
+
+    &:before {
+        content: '●';
         .rem(3);
         position: absolute;
         left: 0;

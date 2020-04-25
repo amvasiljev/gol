@@ -38,26 +38,24 @@ if (navWidth >= bodyWidth) {
   $('.nav__hide').remove();
 }
 
+$('<div>').addClass('nav__close').appendTo($('.nav__hide'))
 
 navMore.hover(
   
   function () {
     $('.nav__hide').dequeue().stop(true, true).fadeIn()
     $('.nav').addClass('nav_active')
-    $('<div>').addClass('nav__close').appendTo($('.nav__hide'))
-   
+    
+    
   },
   function () {
     $('.nav__hide').dequeue().stop(true, true).fadeOut();
     $('.nav').removeClass('nav_active')
-    $('.nav__close').remove()
+    
   }
 )
 
 
-$('.nav__close').on('click', function(){
-  console.log('click');
-})
 
 
 
@@ -199,4 +197,6 @@ $('.section').last().addClass('section_final')
 
 if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
   $('.nav__hide').appendTo('body')
+  $('.header__left').remove()
+  $('.header__right').remove()
 }
