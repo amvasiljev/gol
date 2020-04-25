@@ -15,6 +15,19 @@
             margin-right: 10px;
         }
     }
+    &_footer{
+        @media @1024{
+            padding: 10px 0;
+        }
+        @media @768{
+            width: auto;
+            padding: 10px 0;
+        }
+        @media @320{
+            width: 100%;
+            justify-content: center;
+        }
+    }
 
     &__item{
         height: 40px;
@@ -23,5 +36,8 @@
         background-position: center center;
         background-size: contain;
         margin-left: 20px;
+        @media @320{
+            margin: 0 10px;
+        }
     }
 }
