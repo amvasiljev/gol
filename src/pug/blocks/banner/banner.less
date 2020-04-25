@@ -44,6 +44,14 @@
         .rem(54);
         font-weight: 700;
         line-height: 32px;
+        @media @768{
+            .rem(40);
+            padding: 30px;
+        }
+        @media @320{
+            .rem(30);
+            padding: 10px;
+        }
     }
     &_main{
         .rem(29);
@@ -68,5 +76,12 @@
         .rem(54);
         line-height: 66px;
         background-color: @banner;
+        @media @768{
+            .rem(40);
+
+        }
+        @media @320{
+            .rem(30);
+        }
     }
 }

@@ -5,12 +5,23 @@
     margin-bottom: 30px;
     &_half{
          width: calc(50% - 60px);
+         @media @768{
+             width: calc(50% - 30px);
+         }
+         @media @320{
+             width: 100%;
+             max-width: 414px;
+             flex-flow: wrap;
+         }
     }
 
     &__hero{
         width: 95px;
         display: flex;
         justify-content: space-between;
+        @media @320{
+            // width: 80px;
+        }
     }
     &__logo{
         height: 50px;
@@ -28,12 +39,18 @@
         .rem(20);
         font-weight: 600;
         color: @bld;
+        @media @320{
+            .rem(16);
+        }
 
     }
     &__review{
         .rem(20);
         color: @green;
         font-weight: 400;
+        @media @320{
+            .rem(16);
+        }
     }
     &__date{
         .rem(20);
@@ -41,5 +58,8 @@
         font-weight: 400;
         flex: 1 0 auto;
         text-align: right;
+        @media @320{
+            .rem(14);
+        }
     }
 }

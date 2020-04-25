@@ -22,7 +22,10 @@
     }
     tr{
         height: 45px;
-        
+        @media @320{
+            display: flex;
+    justify-content: space-between;
+        }
     }
     td{
         display: inline-flex;
@@ -32,6 +35,10 @@
         .rem(20);
         color: @bk;
         font-weight: 400;
+        @media @320{
+            .rem(14);
+            padding: 0 5px;
+        }
         a{
             color: @green;
             &:hover,&:active,&:focus,&:visited{

@@ -8,11 +8,15 @@
     font-weight: 600;
     display: inline-block;
 
+    @media @768{
+        min-width: unset;
+    }
     @media @320{
         .rem(24);
         min-width: unset;
         margin: 0 0 20px 0;
         padding: 15px 0;
+        ;
     }
 
     &:before {
@@ -35,6 +39,9 @@
         padding: 25px 0 10px;
         display: block;
         width: 370px;
+        @media @768{
+            width: 100%;
+        }
         @media @320{
             width: 100%;
         }
@@ -48,6 +55,9 @@
         padding: 25px 0 10px;
         display: block;
         width: 370px;
+        @media @768{
+            width: 100%;
+        }
         @media @320{
             width: 100%;
         }

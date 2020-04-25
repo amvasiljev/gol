@@ -5,6 +5,9 @@
     flex-direction: column;
     box-shadow: @box;
     margin-bottom: 30px;
+    @media @ie{
+        margin-bottom: 90px;
+    }
     @media @768{
         width: calc(50% - 15px);
     }
