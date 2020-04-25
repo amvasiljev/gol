@@ -5,6 +5,13 @@
     flex-direction: column;
     box-shadow: @box;
     margin-bottom: 30px;
+    @media @768{
+        width: calc(50% - 15px);
+    }
+    @media @320{
+        max-width: 414px;
+        width: 100%;
+    }
     &_news{
         height: 300px;
     }

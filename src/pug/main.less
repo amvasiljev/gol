@@ -60,6 +60,9 @@ p {
     font-weight: 400;
     color: @text;
     margin-bottom: 24px;
+    @media @320{
+        line-height: 1.44;
+    }
 }
 
 ul {
@@ -71,6 +74,9 @@ li {
     .rem(19);
     font-weight: 400;
     color: @text;
+    @media @320{
+        line-height: 1.44;
+    }
 
     position: relative;
 
@@ -79,6 +85,9 @@ li {
         .rem(3);
         position: absolute;
         left: 0;
-        top: 40%;
+        top: 10px;
+        @media @320{
+            top: 11px;
+        }
     }
 }

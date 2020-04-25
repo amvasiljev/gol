@@ -85,6 +85,37 @@ $('.slider-team__box').slick({
   nextArrow: '<div class="slider-team__arrow slider-team__arrow_next slider-team__arrow_next">',
   prevArrow: '<div class="slider-team__arrow slider-team__arrow_prev slider-team__arrow_prev">',
   appendArrows: $('.slider-team__arrows'),
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 10,
+        slidesToScroll: 3,
+        
+      }
+    },{
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 7,
+        slidesToScroll: 3,
+        
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    }
+  ]
 })
 
 

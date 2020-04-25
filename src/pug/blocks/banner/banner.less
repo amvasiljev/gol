@@ -27,6 +27,14 @@
         .rem(54);
         font-weight: 700;
         line-height: 32px;
+        @media @768{
+            .rem(40);
+            padding: 30px;
+        }
+        @media @320{
+            .rem(30);
+            padding: 10px;
+        }
     }
     &_top{
         width: 100%;
@@ -44,6 +52,13 @@
         height: 285px;
         padding: 0 30px;
         margin-top: 30px;
+        @media @768{
+            width: calc(50% - 15px);
+        }
+        @media @320{
+            max-width: 414px;
+            width: 100%;
+        }
     }
     &_single{
         width: 100%;

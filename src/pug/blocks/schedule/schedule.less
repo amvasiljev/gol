@@ -11,9 +11,25 @@
         justify-content: space-between;
         height: 77px;
         border-bottom: 1px solid @line;
+
+        @media @1024{
+            padding: 0 30px;
+        }
+        @media @768{
+            padding: 0 15px;
+        }
+        @media @320{
+            height: auto;
+            flex-flow: wrap;
+            padding: 0 10px;
+        }
         &_video{
             height: 177px;
             justify-content: center;
+            @media @320{
+                height: 200px;
+               
+            }
         }
     }
 
@@ -30,11 +46,18 @@
         background-repeat: no-repeat;
         background-position: center 25px;
         background-size: 60px;
+        @media @320{
+           .rem(19);
+        }
     }
     &__soon {
         display: flex;
         align-items: center;
         flex: 0 0 50%;
+        @media @320{
+            flex: 0 0 100%;
+            flex-flow: wrap;
+        }
     }
 
     &__name {
@@ -42,6 +65,15 @@
         color: @green;
         font-weight: 600;
         white-space: nowrap;
+        @media @320{
+            height: 40px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+           
+        }
     }
 
     &__date {
@@ -50,6 +82,15 @@
         margin-left: 50px;
         font-weight: 400;
         color: @bk;
+        @media @320{
+            height: 40px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            width: 30%;
+            .rem(16);
+        }
 
     }
 
@@ -59,6 +100,12 @@
         .rem(19);
         color: @bk;
         font-weight: 600;
+        @media @320{
+            .rem(16);
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__select {

@@ -42,6 +42,15 @@
         max-width: 1170px;
         width: 100%;
         padding: 60px 0;
+        @media @1024{
+            padding:  50px 30px;
+        }
+        @media @768{
+            padding:  50px 15px;
+        }
+        @media @320{
+            padding: 30px 10px;
+        }
         &_half{
             display: flex;
             flex-flow: wrap;
@@ -59,6 +68,13 @@
         flex-flow: wrap;
         justify-content: space-between;
         padding: 15px 0 45px;
+        &:after{
+            content:'';
+            flex: 0 0 270px;
+        }
+        @media @320{
+            justify-content: center;
+        }
 
         &_related {
             padding: 15px 0 45px;
@@ -67,14 +83,20 @@
         }
         &_half{
             width: calc(50% - 30px);
+            @media @320{
+                width: 100%;
+            }
         }
         &_noflex{
             display: block;
         }
     }
 
-    img {
+    &__image{
         max-width: 970px;
+        @media @1024,@768,@320{
+            width: 100%;
+        }
     }
 
     &__subtitle {
@@ -134,6 +156,9 @@
     &__table{
         width: 100%;
         margin-top: -40px;
+        @media @320{
+            margin-top: 0;
+        }
         img{
             height: 30px;
             width: 27px;

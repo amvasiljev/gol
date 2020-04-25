@@ -9,6 +9,18 @@
         justify-content: flex-start;
         border-bottom: 1px solid @line;
         height: 75px;
+        flex-flow: wrap;
+        @media @1024{
+            padding: 0 30px;
+        }
+        @media @768{
+            padding: 0 15px;
+
+        }
+        @media @320{
+            padding: 5px 10px;
+            height: auto;
+        }
     }
     &__link{
         color: @bld;
@@ -17,12 +29,18 @@
         margin-right: 7px;
         display: flex;
         justify-content: space-between;
+        @media @320{
+            .rem(14);
+        }
         &:after{
             content:'-';
             color: @bld;
             .rem(20);
             font-weight: 400;
             margin-left: 7px;
+            @media @320{
+                .rem(14);
+            }
         }
         &:hover,&:active,&:focus{
             color: @bld;
@@ -32,6 +50,9 @@
         color: @bld;
         .rem(20);
         font-weight: 400;
+        @media @320{
+            .rem(14);
+        }
 
     }
 }

@@ -8,6 +8,13 @@
     font-weight: 600;
     display: inline-block;
 
+    @media @320{
+        .rem(24);
+        min-width: unset;
+        margin: 0 0 20px 0;
+        padding: 15px 0;
+    }
+
     &:before {
         position: absolute;
         content: '';
@@ -28,6 +35,9 @@
         padding: 25px 0 10px;
         display: block;
         width: 370px;
+        @media @320{
+            width: 100%;
+        }
     }
     &_half{
         .rem(31);
@@ -38,6 +48,9 @@
         padding: 25px 0 10px;
         display: block;
         width: 370px;
+        @media @320{
+            width: 100%;
+        }
     }
     &_single{
         .rem(40);
