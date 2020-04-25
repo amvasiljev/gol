@@ -3,9 +3,17 @@
     
     display: flex;
     
+
     &_header{
         width: 400px;
         justify-content: flex-end;
+        @media @768{
+            width: auto;
+        }
+        @media @320{
+            width: calc(50% - 10px);
+            margin-right: 10px;
+        }
     }
 
     &__item{

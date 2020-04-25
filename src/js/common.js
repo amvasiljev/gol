@@ -42,9 +42,11 @@ if (navWidth >= bodyWidth) {
 navMore.hover(
   function () {
     $('.nav__hide').dequeue().stop(true, true).fadeIn()
+    $('.nav').addClass('nav_active')
   },
   function () {
     $('.nav__hide').dequeue().stop(true, true).fadeOut();
+    $('.nav').removeClass('nav_active')
   }
 )
 

@@ -7,6 +7,14 @@
         height: 75px;
         width: 370px;
         background-size: 275px;
+        @media @768{
+            margin-left: 15px;
+        }
+        @media @320{
+            width: calc(50% - 10px);
+            background-size: contain;
+            margin-left: 10px;
+        }
     }
     &_footer{
         height: 57px;

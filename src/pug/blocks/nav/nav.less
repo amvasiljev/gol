@@ -1,11 +1,37 @@
-.nav{
+.nav {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 75px;
     background-image: @menu;
-    &__item{
+
+    @media @320 {
+        height: 55px;
+    }
+
+    &_active {
+        @media @320 {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 0;
+                right: 0;
+                height: 55px;
+                width: 55px;
+                background-image: url(/assets/img/close.svg);
+                background-repeat: no-repeat;
+                background-position: 100% 0;
+                background-size: 55px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__item {
         color: @wt;
         .rem(20);
         line-height: normal;
@@ -16,14 +42,18 @@
         padding: 0 20px;
         position: relative;
         white-space: nowrap;
-    
-        
-        
-        &_active{
-            &:before{
+
+        @media @320 {
+            min-width: 40%;
+
+        }
+
+
+        &_active {
+            &:before {
                 position: absolute;
                 display: block;
-                content:'';
+                content: '';
                 height: 2px;
                 width: 100%;
                 left: 0;
@@ -31,12 +61,16 @@
                 background-color: @wt;
             }
         }
-        &:hover,&:focus,&:active{
+
+        &:hover,
+        &:focus,
+        &:active {
             color: @wt;
-            &:before{
+
+            &:before {
                 position: absolute;
                 display: block;
-                content:'';
+                content: '';
                 height: 2px;
                 width: 100%;
                 left: 0;
@@ -46,7 +80,7 @@
         }
     }
 
-    &__more{
+    &__more {
         cursor: pointer;
         color: @wt;
         .rem(20);
@@ -58,10 +92,11 @@
         padding: 0 20px;
         position: relative;
         white-space: nowrap;
-        
-        
+
+
     }
-    &__hide{
+
+    &__hide {
         position: absolute;
         padding: 20px;
         background-color: @banner;
@@ -71,6 +106,17 @@
         flex-direction: column;
         width: 220px;
         z-index: 200;
-        
+
+        @media @320 {
+            position: fixed;
+            left: 0;
+            right: unset;
+            top: 221px;
+            width: 100%;
+            flex-direction: row;
+            flex-flow: wrap;
+            justify-content: space-between;
+        }
+
     }
 }

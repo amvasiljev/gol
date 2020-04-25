@@ -2,6 +2,9 @@
     width: 100%;
     position: relative;
     height: 155px;
+    @media @320{
+        height: auto;
+    }
     &__inner{
         margin: 0 auto;
         padding: 0;
@@ -12,6 +15,17 @@
         justify-content: center;
         align-items: center;
         z-index: 10;
+        @media @1024{
+            padding: 0 30px;
+        }
+        @media @768{
+            padding: 0 15px;
+        }
+        @media @320{
+            height: auto;
+            flex-flow: wrap;
+            padding: 0;
+        }
     }
     &__left{
         position: absolute;
@@ -23,6 +37,9 @@
         background-position: 0 0;
         background-size: contain;
         z-index: -1;
+        @media @320{
+            opacity: 0;
+        }
     }
     &__right{
         position: absolute;
@@ -34,5 +51,8 @@
         background-position: 100% 0;
         background-size: contain;
         z-index: -1;
+        @media @320{
+            opacity: 0;
+        }
     }
 }
