@@ -1,0 +1,54 @@
+.battle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    // &__team {}
+
+    &__logo {
+        height: 150px;
+        width: 150px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: contain;
+        margin-bottom: 10px;
+    }
+
+    &__name {
+        .rem(20);
+        color: @green;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__content {
+        .rem(20);
+        color: @green;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__title {
+        .rem(21);
+        color: @bld;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__count {
+        .rem(20);
+        color: @green;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &__score {
+        .rem(20);
+        color: @green;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

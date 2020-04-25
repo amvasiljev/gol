@@ -2,12 +2,14 @@ mixin section_half_2()
     .section
         .section__inner.section__inner_half
             .section__box.section__box_related.section__box_half.section__box_noflex
-                +title('Тамбов - Крылья Советов','title_single')
+                +title('Тамбов - Крылья Советов','title_review')
+                .section__subtitle.section__subtitle_review 16.03.2020, обзор матча, видео обзор
+                +battle()
                 <iframe width="100%" height="320px" src="https://www.youtube.com/embed/15nmOBcNzpE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 +banner('banner_single','Место для Вашей рекламы')
             .section__box_half  
                 .section__box.section__box_related
-                    +title('Смотрите также','title_half')
+                    +title('Смотрите также','title_half title_left')
                     +related()
                     +related()
                     +related()
@@ -15,7 +17,7 @@ mixin section_half_2()
                     +related()
                 
                 .section__box.section__box_related.section__box_noflex
-                    +title('Таблица','title_half')
+                    +title('Таблица','title_half title_left')
                     table.section__table
                         tr
                             th м
